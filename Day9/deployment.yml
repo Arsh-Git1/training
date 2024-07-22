@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx-site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-nginx-site
+  template:
+    metadata:
+      labels:
+        app: my-nginx-site
+    spec:
+      containers:
+      - name: nginx-static-site
+        # image: arshshaikh777/my-static-web-app:latest
+        image: arshshaikh777/new-static-app:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+           cpu: 50m
+          requests:
+           cpu: 20m

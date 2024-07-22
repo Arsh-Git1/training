@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-web
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+  - hosts:
+    - local.static
+    secretName: my-tls-secret
+  rules:
+  - host: local.static
+    http:
+      paths:
+      - path: /test
+        pathType: Prefix
+        backend:
+          service:
+            name: my-nginx-site-service
+            port:
+              number: 8080
+  - host: new.test
+    http:
+      paths:
+      - path: /trial
+        pathType: Prefix
+        backend:
+          service:
+            name: my-nginx-site-service
+            port:
+              number: 8080
+ 
