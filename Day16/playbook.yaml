@@ -1,0 +1,24 @@
+---
+- name: Install nginx on all nodes
+  hosts: target01
+  become: yes
+  tasks:
+    - name: Ensure nginx is installed
+      apt:
+        name: nginx
+        state: present
+
+    - name: creating a file
+      file:
+        path: /home/arsh.txt
+        state: touch
+
+    - name: updating file
+      lineinfile:
+        path: /home/arsh.txt
+        line: hello there its ansible
+
+    - name: deleting a file
+      file:
+        path: /home/arsh.txt
+        state: absent

@@ -1,0 +1,16 @@
+---
+- name: Install nginx on all nodes
+  hosts: target01
+  
+  tasks:
+  - name: download transaction_list
+    block:
+      - get_url:
+          url: http://trustadvisory.info/tra/pdf/MAB2015_categorywise.compressed.pdf
+          dest: /home/ubuntu
+      - debug: msg="File downloaded"
+    rescue:
+      - debug: msg="133t.com appears to be down."
+      - get_url:
+          url: http://leatherindia.org/wp-content/uploads/2017/07/LIST-OF-PARTICIPANTS.pdf
+          dest: /home/ubuntu
