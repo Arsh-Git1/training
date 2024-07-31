@@ -66,6 +66,59 @@ Jenkins Pipeline:
 
 Create a Jenkinsfile to define the CI/CD pipeline stages, including build, test, and deploy.
 
+    pipeline {
+    agent any
+    environment {
+        registry = 'docker.io'  
+        registryCredential = 'Docker_credentials' 
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/Arsh-Git1/Day15.git', branch: 'main'
+            }
+        }
+        stage('build image') {
+            steps{
+                script{
+                    docker.withRegistry('', registryCredential){
+                        def customImage = docker.build("arshshaikh777/day15-ansible:${env.BUILD_ID}")
+                        customImage.push()
+
+                    }
+                }
+            }
+        }
+        stage('Deploy Container') {
+            steps {
+                script {
+                    docker.withRegistry('', registryCredential) {
+                        def runContainer = docker.image("arshshaikh777/day15-ansible:${env.BUILD_ID}").run('--name day_fifteen -d')
+                        echo "Container ID: ${runContainer.id}"
+                    }
+                }
+            }
+        }
+    }
+    }
+
+Ansible Playbook:
+
+    Basic Playbook Creation:
+        Develop an Ansible playbook to automate the deployment of the Docker container.
+
+    Playbook Tasks:
+
+        Install Docker on the target server (if Docker is not already installed).
+
+        Pull the Docker image from the container registry.
+
+        Run the Docker container with the required configurations.
+
+    Inventory File:
+        Create an inventory file specifying the target server(s) for deployment.
+
+
 
 
 
