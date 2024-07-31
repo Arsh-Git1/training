@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Amaan00101/training_day-14.git', branch: 'main'
+                git url: 'https://github.com/Arsh-Git1/training/Day14.git', branch: 'main'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
             steps{
                 script{
                     docker.withRegistry('', registryCredential){
-                        def customImage = docker.build("amaan00101/myjava-app:${env.BUILD_ID}")
+                        def customImage = docker.build("arshshaikh777/myjava-app:${env.BUILD_ID}")
                         customImage.push()
 
 
@@ -31,7 +31,7 @@ pipeline {
 
                 script {
                     docker.withRegistry('', registryCredential) {
-                        def runContainer = docker.image("amaan00101/myjava-app:${env.BUILD_ID}").run('--name mynew-container -d')
+                        def runContainer = docker.image("arshshaikh777/myjava-app:${env.BUILD_ID}").run('--name mynew-container -d')
                         echo "Container ID: ${runContainer.id}"
                     }
                 }
