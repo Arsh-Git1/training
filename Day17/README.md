@@ -194,7 +194,7 @@ Use Ansible to automate the configuration of both servers, including the initial
 
 ## Deliverables
 
-### Ansible Inventory File
+### 1. Ansible Inventory File
 
 Filename: inventory.ini
 Content: Defines the database server and application server instances, including their IP addresses and connection details.
@@ -209,7 +209,7 @@ target02 ansible_host=18.190.176.41 ansible_user=ubuntu ansible_ssh_private_key_
 
 ![alt text](<Screenshot from 2024-08-01 17-27-50.png>)
 
-### Ansible Playbook
+### 2. Ansible Playbook
 
 Filename: deploy_multitier_stack.yml
 
@@ -299,7 +299,7 @@ The deployment of the web application and its configuration to connect to the da
       state: restarted
 ```
 
-### Jinja2 Template
+### 3. Jinja2 Template
 
 Filename: templates/app_config.php.j2
 
@@ -326,7 +326,7 @@ echo "Connected successfully";
 ```
 ![alt text](<Screenshot from 2024-08-01 17-40-51-1.png>)
 
-### Application Files
+### 4. Application Files
 
 Filename: files/index.html (or equivalent application files)
 Content: Static or basic dynamic content served by the web application.
