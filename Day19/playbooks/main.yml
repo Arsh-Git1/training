@@ -1,0 +1,23 @@
+---
+- name: New Application
+  hosts: all
+  become: yes
+  tasks:
+  - name: update_cache
+    apt:
+      update_cache: yes
+
+- hosts: all
+  become: true
+  roles:
+  - roles/database
+
+- hosts: all
+  become: true
+  roles:
+  - roles/web-server
+
+- hosts: all
+  become: true
+  roles:
+  - roles/application
