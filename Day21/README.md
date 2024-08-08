@@ -244,9 +244,7 @@ check_logs $AUTH_LOG_FILE "authentication failure"
 echo "Log check completed."
 ```
 
-
-![alt text](<Screenshot from 2024-08-08 20-58-21.png>)
-
+![alt text](<images/Screenshot from 2024-08-08 20-58-21.png>)
 
 
 ### 5. Installation and Setup of Prometheus and Node Exporter:
@@ -286,7 +284,7 @@ cd prometheus-2.53.1.linux-amd64/
 
 ### Output
 
-![alt text](<Screenshot from 2024-08-08 22-02-41.png>)
+![alt text](<images/Screenshot from 2024-08-08 22-02-41.png>)
 
 ### Steps to install Node-Exporter
 
@@ -316,8 +314,7 @@ cd node_exporter-1.8.2.linux-amd64/
 
 ### Output
 
-![alt text](<Screenshot from 2024-08-08 19-31-55.png>)
-
+![alt text](<images/Screenshot from 2024-08-08 19-31-55.png>)
 
 
 ### 6. Prometheus Query Language (PromQL) Basic Queries:
@@ -350,15 +347,15 @@ Create a series of PromQL queries to monitor system performance, such as CPU usa
 rate(node_cpu_seconds_total[5m])
 ```
 
-![alt text](<Screenshot from 2024-08-08 19-15-07.png>)
+![alt text](<images/Screenshot from 2024-08-08 19-15-07.png>)
 
-![alt text](<Screenshot from 2024-08-08 19-15-01.png>)
+![alt text](<images/Screenshot from 2024-08-08 19-15-01.png>)
 
 ```
 100 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100)
 ```
 
-![alt text](<Screenshot from 2024-08-08 22-15-48.png>)
+![alt text](<images/Screenshot from 2024-08-08 22-15-48.png>)
 
 ### 7. Final Report and Presentation:
 
