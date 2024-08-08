@@ -243,7 +243,11 @@ check_logs $AUTH_LOG_FILE "authentication failure"
 
 echo "Log check completed."
 ```
+
+
 ![alt text](<Screenshot from 2024-08-08 20-58-21.png>)
+
+
 
 ### 5. Installation and Setup of Prometheus and Node Exporter:
 
