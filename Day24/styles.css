@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Main content styling */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Image section styling */
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+}
+
+/* Footer styling */
+/*footer {
+    background: #043eb1b0;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+html
+footer>
+        <p>&copy; 2024 My Static Website</p>
+    </footer>
+*/
