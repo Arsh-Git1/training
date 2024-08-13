@@ -79,3 +79,14 @@ Enable versioning on the bucket.
 * Restrict access to the S3 management console for specific IAM users using the bucket policy.
 
 ![alt text](<images/Screenshot from 2024-08-13 16-31-25.png>)
+
+
+### 5. Test and Validate the Configuration:
+
+* Test the static website URL to ensure it is accessible.
+
+
+    - https://techvista-portfolio-arsh.s3.ap-southeast-2.amazonaws.com/index.html
+
+
+![alt text](<images/Screenshot from 2024-08-13 16-08-20.png>)
