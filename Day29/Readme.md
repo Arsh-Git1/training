@@ -213,7 +213,8 @@ variable "region" {
     
     + Verify that the EC2 instance, S3 bucket, and all configurations are properly set up.
 
-![s](<images/Screenshot from 2024-08-31 08-29-17.png>)
+![alt text](<images/Screenshot from 2024-08-31 08-32-28.png>)
+
 + Infrastructure Changes:
     
     + Modify one of the variables (e.g., change the instance type or add tags) and re-run terraform apply.
