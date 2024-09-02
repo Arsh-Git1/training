@@ -325,7 +325,7 @@ instance_type     = "t2.micro"
 ami_id            = "ami-0c2af51e265bd5e0e"
 db_username       = "admin"
 db_password       = "password"
-s3_bucket_prefix  = "yaksh-terraform-bucket"
+s3_bucket_prefix  = "arsh-terraform-bucket"
 ```
 
 
@@ -386,8 +386,6 @@ terraform apply -var-file=prod.tfvars -var="aws_profile=prod"
 1. Use the terraform apply command to deploy the infrastructure in each workspace.
 
 2. Verify the deployment by accessing the EC2 instances and ensuring the application is running.
-
-![alt text](<images/Screenshot from 2024-08-30 18-07-54.png>)
 
 
 
