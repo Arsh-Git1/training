@@ -25,7 +25,7 @@ variable "availability_zones" {
 variable "name" {
   description = "The name prefix for resources"
   type        = string
-  default     = "sp"
+  default     = "AS"
 }
 
 variable "environment" {
@@ -43,19 +43,19 @@ variable "container_port" {
 variable "cluster_name" {
   description = "The name of the ECS cluster"
   type        = string
-  default     = "mynew_Cluster"
+  default     = "Mine-New-Cluster"
 }
 
 variable "task_family_name" {
   description = "The name of the ECS task family"
   type        = string
-  default     = "mynew_Cluster"
+  default     = "Mine-New-Cluster"
 }
 
 variable "container_image" {
   description = "The Docker image to be used"
   type        = string
-  default     = "Sp_Image"
+  default     = "AS-Image"
 
 }
 
@@ -76,13 +76,13 @@ variable "container_environment" {
 variable "ecs_service_name" {
   description = "The name of the ECS service"
   type        = string
-  default     = "my_ECS"
+  default     = "Mine-New-ECS"
 }
 
 variable "db_name" {
   description = "The name of the database"
   type        = string
-  default = "sp-ecs-db"
+  default = "AS-Ecs-db"
 }
 
 variable "db_username" {
@@ -94,6 +94,6 @@ variable "db_username" {
 variable "db_password" {
   description = "The password for the database"
   type        = string
-  default = "MySecurePassword123!"
+  default = "MySecPassword123!"
 }
 
